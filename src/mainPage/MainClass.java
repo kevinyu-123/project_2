@@ -1,6 +1,7 @@
 package mainPage;
 
 import java.util.Scanner;
+import ys.*;
 
 public class MainClass {
 	public static void main(String[] args) {
@@ -16,6 +17,8 @@ public class MainClass {
 		case 1:
 			break;
 		case 2:
+			Ys_Interface yi = new Member();
+			yi.display();
 			break;
 		case 3:
 			break;
