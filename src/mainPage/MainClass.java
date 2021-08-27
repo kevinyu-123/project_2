@@ -3,6 +3,8 @@ package mainPage;
 import java.util.Scanner;
 import ys.*;
 
+import hj.acc;
+
 public class MainClass {
 	public static void main(String[] args) {
 		/*
@@ -25,6 +27,24 @@ public class MainClass {
 		case 4:
 			break;
 		case 5:
+			acc mon = new acc();
+			mon.list();
+			sel = scan.nextInt();
+			switch (sel) {
+			case 1:
+				mon.show();
+				break;
+			case 2:
+				System.out.print("넣을 금액 입력: ");
+				int money = scan.nextInt();
+				mon.deposit(money);
+				break;
+			case 3:
+				System.out.print("뽑을 금액 입력: ");
+				money = scan.nextInt();
+				mon.withdraw(money);
+				break;
+			}
 			break;
 		}
 
