@@ -1,8 +1,9 @@
 package mainPage;
 
 import java.util.Scanner;
-import ys.*;
 
+import ys.Member;
+import ys.Ys_Interface;
 import hj.acc;
 
 public class MainClass {
@@ -21,6 +22,18 @@ public class MainClass {
 		case 2:
 			Ys_Interface yi = new Member();
 			yi.display();
+			sel = scan.nextInt();
+			switch (sel) {
+			case 1:
+				yi.warrior();
+				break;
+			case 2:
+				yi.archer();
+				break;
+			case 3:
+				yi.wizard();
+				break;
+			}
 			break;
 		case 3:
 			break;
