@@ -8,7 +8,6 @@ import hj.acc;
 
 import eb.Eun;
 import eb.Jo;
-
 public class MainClass {
 	public static void main(String[] args) {
 		/*

@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 //id와passwd가 일치하면 로그인하고 로그아웃
 
-
 public class Eun implements Jo {
 	public String id;
 	public String pw;
