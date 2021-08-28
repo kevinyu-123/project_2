@@ -6,6 +6,9 @@ import ys.Member;
 import ys.Ys_Interface;
 import hj.acc;
 
+import eb.Eun;
+import eb.Jo;
+
 public class MainClass {
 	public static void main(String[] args) {
 		/*
@@ -18,7 +21,26 @@ public class MainClass {
 		sel = scan.nextInt();
 		switch (sel) {
 		case 1:
+			Eun eb = new Eun();
+			Scanner in = new Scanner(System.in);
+			System.out.println("아이디와 비밀번호가 일치하면 로그인 됩니다 \n --예) 아이디:12 비번:12");
+
+			while(true) {
+			System.out.print("아이디 : ");
+			eb.id=in.next();
+			System.out.print("비밀번호 : ");
+			eb.pw=in.next();
+			if(eb.id.equals(eb.pw)) {
+				eb.login(); break;
+			}else {
+				System.out.println("오류");
+			}
+			}
+			System.out.println("로그아웃하시려면 0을 누르세요");
+			if(in.nextInt()==0)
+				eb.logout();
 			break;
+			
 		case 2:
 			Ys_Interface yi = new Member();
 			yi.display();
