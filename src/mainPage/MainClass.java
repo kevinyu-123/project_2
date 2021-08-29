@@ -69,14 +69,14 @@ public class MainClass {
 				bo.name(null);
 			}if(num == 2) {
 				bo.writer(null);
-			}else if(num == 3) {
+			}if(num == 3) {
 				bo.list(null);
 			}
 			else if(num == 4){
 				System.out.println("종료 되었습니다.");
-				break;
+			break;
 			} 
-		}
+		} break;
 		case 5:
 			acc mon = new acc();
 			mon.list();
