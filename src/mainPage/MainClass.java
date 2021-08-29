@@ -5,7 +5,7 @@ import java.util.Scanner;
 import ys.Member;
 import ys.Ys_Interface;
 import hj.acc;
-
+import js.Rec;
 import eb.Eun;
 import eb.Jo;
 
@@ -40,7 +40,6 @@ public class MainClass {
 			if(in.nextInt()==0)
 				eb.logout();
 			break;
-			
 		case 2:
 			Ys_Interface yi = new Member();
 			yi.display();
@@ -60,7 +59,24 @@ public class MainClass {
 		case 3:
 			break;
 		case 4:
-			break;
+		int num;
+		Rec bo = new Rec();
+		while(true) {
+			System.out.println("기능을 선택하세요");
+			System.out.println("1.저자명으로 찾기 2.책 이름으로 찾기 3.리스트 보기 4.종료");
+			num=scan.nextInt();
+			if(num == 1) {
+				bo.name(null);
+			}if(num == 2) {
+				bo.writer(null);
+			}else if(num == 3) {
+				bo.list(null);
+			}
+			else if(num == 4){
+				System.out.println("종료 되었습니다.");
+				break;
+			} 
+		}
 		case 5:
 			acc mon = new acc();
 			mon.list();
@@ -82,6 +98,6 @@ public class MainClass {
 			}
 			break;
 		}
-
 	}
 }
+
